@@ -1,0 +1,65 @@
+.btn {
+	display: inline-block;
+	margin: 0;
+	padding: 7px 12px;
+	font-size: map-get($font-sizes, 'lg');
+	font-weight: normal;
+	line-height: 1.5;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	user-select: none;
+	transition: color .3s ease, background .3s ease, border-color .3s ease;
+	-webkit-user-drag: none;
+	-webkit-appearance: none;
+	min-width: 120px;
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+	&:disabled,
+	&.disabled {
+		opacity: .65;
+		cursor: not-allowed;
+	}
+	&:not(:disabled):not(.btn--disabled) {
+		cursor: pointer;
+	}
+	&--primary {
+		background: $primary;
+		border-color: $primary;
+		color: $black;
+		&:hover {
+			background: darken($primary, 10%);
+			border-color: darken($primary, 25%);
+			color: $black;
+		}
+		&:disabled,
+		&.disabled {
+			background: $primary;
+			border-color: $primary;
+		}
+	}
+	&--block {
+		display: block;
+		width: 100%;
+	}
+	&--secondary {
+		background: $secondary;
+		border-color: $secondary;
+		color: $black;
+		&:hover {
+			background: darken($secondary, 10%);
+			border-color: darken($secondary, 25%);
+			color: $black;
+		}
+		&:disabled,
+		&.disabled {
+			background: $secondary;
+			border-color: $secondary;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+html {
+	--scrollbar-color: #f9911e;
+	--scrollbar-bg: #000;
+	scrollbar-width: thin;
+	scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scrollbar-color);
+	transition: background-color .3s ease;
+}

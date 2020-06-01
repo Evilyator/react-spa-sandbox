@@ -1,0 +1,85 @@
+// Breakpoints map
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 414px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'laptop': 1280px,
+	'widescreen': 1366px
+);
+
+
+// Color system
+$white:     #fff;
+$black:     #333;
+$yellow:    #fbb03b;
+$orange:    #f9911e;
+$purple:    #77429c;
+
+$primary:   $yellow;
+$secondary: $white;
+
+
+// container max width, used for .container element
+$gutter: 15px;
+$container-max-width: 1140px + $gutter * 2;
+
+
+// Fonts
+$font-base: 'proxima nova', Helvetica, sans-serif;
+
+$font-sizes: (
+	'xl': 18px,
+	'lg': 16px,
+	'base': 14px,
+	'md': 12px,
+	'sm': 10px
+);
+
+$font-sizes-max: (
+	'xl': 22px,
+	'lg': 20px,
+	'base': 18px,
+	'md': 16px,
+	'sm': 14px
+);
+
+$headings-sizes: (
+	'h1': 30px,
+	'h2': 26px,
+	'h3': 22px,
+	'h4': 20px,
+	'h5': 18px,
+	'h6': 16px
+);
+
+$headings-sizes-max: (
+	'h1': 40px,
+	'h2': 36px,
+	'h3': 32px,
+	'h4': 30px,
+	'h5': 28px,
+	'h6': 26px
+);
+
+
+// Variables for @include fluid-type mixin;
+// This mixin allow fonts to grow from $min viewport width to $max viewport width between sizes that are provided
+$fluid-min: map-get($breakpoints, 'xs-phone');
+$fluid-max: map-get($breakpoints, 'widescreen');
+
+
+$font-weight-thin: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$line-height-base: 1.25;
+
+
+// Settings for the `<body>` element.
+$app-min-width: map-get($breakpoints, 'xs-phone');
+
+
+// Forms
+$form-group-input-height: 40px;

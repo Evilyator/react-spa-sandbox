@@ -1,0 +1,57 @@
+body {
+	@include fluid-type(map-get($font-sizes, 'base'), map-get($font-sizes-max, 'base'));
+	height: 100%;
+	font-family: $font-base;
+	font-weight: $font-weight-normal;
+	line-height: $line-height-base;
+	text-rendering: optimizeLegibility;
+	color: $white;
+	background-image: linear-gradient(135deg, #322c74 0%, $purple 100%);
+	background-attachment: fixed;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-width: $app-min-width;
+	.menu--opened & {
+		overflow: hidden;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $primary;
+	transition: color .3s ease;
+	&:hover {
+		color: darken($primary, 20%);
+	}
+}
+
+ul,
+ol,
+dl,
+p {
+	margin: 0 0 .5em;
+}
+
+@for $i from 1 through 6 {
+	.h#{$i},
+	h#{$i} {
+		color: inherit;
+		font-weight: normal;
+		margin: 0 0 .5em;
+		&:empty {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+	}
+}
+
+@each $name, $value in $headings-sizes {
+	#{$name},
+	.#{$name} {
+		$max-value: map-get($headings-sizes-max, $name);
+		@include fluid-type($value, $max-value);
+	}
+}
